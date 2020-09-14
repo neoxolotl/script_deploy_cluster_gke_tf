@@ -1,0 +1,24 @@
+#!/bin/bash
+# Install Terraform on linux 
+
+echo "Install Terraform on Linux "
+echo  
+echo this program will request sudo access
+
+sudo apt install unzip
+wget https://releases.hashicorp.com/terraform/0.12.6/terraform_0.12.6_linux_amd64.zip
+unzip terraform_0.12.6_linux_amd64.zip
+sudo mv terraform /opt/terraform
+sudo ln -s /opt/terraform /usr/local/bin/terraform
+
+
+echo "Initialize"
+
+echo "deb https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo apt-get update && sudo apt-get install google-cloud-sdk kubectl
+gcloud init
+
+
+
+
