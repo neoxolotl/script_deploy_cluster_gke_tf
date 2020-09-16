@@ -6,6 +6,7 @@ echo
 echo this program will request sudo access
 
 sudo apt install unzip
+sudo apt install wget
 wget https://releases.hashicorp.com/terraform/0.12.6/terraform_0.12.6_linux_amd64.zip
 unzip terraform_0.12.6_linux_amd64.zip
 sudo mv terraform /opt/terraform
