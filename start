@@ -42,7 +42,7 @@ if [ $valA == "CREATE" ]  ; then
         	  gcloud auth application-default login 
 	     	echo "----------------Select a Project -----------------------------------------"
 		   gcloud projects list
-		   gcloud init 
+		   gcloud init --skip-diagnostics
 		echo "----------------Enter Project---------------------------------------------"
 		echo "----------------Select copy and Paste Project Name------------------------"
 		read ValProject	
